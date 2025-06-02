@@ -1,0 +1,22 @@
+# Environment variables
+.env*
+
+# Credentials
+serviceAccountKey.json
+*.pem
+*.key
+
+# Dependencies
+node_modules
+/.pnp
+.pnp.js
+package-lock.json
+
+# IDE and editors
+/.idea
+/.vscode
+*.swp
+*.swo
+.DS_Store
+*.sublime-project
+*.sublime-workspace
