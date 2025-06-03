@@ -33,7 +33,7 @@ async function analyzeAndStoreViralPosts() {
             if (postData.upvotes >= 8000 && postAgeInHours <= 24) {
                 // calculate the number of comments for engagement
                 const commentEngagement = Math.floor(postData.upvotes / postData.num_comments)
-                if (commentEngagement >= 5 && commentEngagement <= 20) {
+                if (commentEngagement >= 5) { // TODO LATER: this is a logic error should be at AT LEAST between 5 and 20%
                     // add the post to the viral posts collection
                     const viralPosts = db.collection('viralPosts');
                     const collectionRef = viralPosts.doc(postData.id);
