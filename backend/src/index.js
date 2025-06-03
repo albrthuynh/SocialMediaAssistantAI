@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const { db } = require('../firebase-admin.js')
 const { analyzeAndStoreViralPosts } = require('./services/postAnalyzer.js');
+const port = process.env.PORT || 4000;
 
 // Initialize Express app
 const app = express();
@@ -9,6 +10,11 @@ const app = express();
 // Middleware
 app.use(cors()); // Enable CORS for frontend requests
 app.use(express.json()); // Parse JSON request bodies
+
+// App is listening on the specified port
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
 
 // Routes
 app.get('/', (req, res) => {
