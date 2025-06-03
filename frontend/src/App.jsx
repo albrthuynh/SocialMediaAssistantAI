@@ -2,7 +2,7 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from './components/Navbar';
 import { SidebarProvider } from "@/components/ui/sidebar"; 
-import AnalyticsSidebar from './components/analyticsSidebar';
+import { AnalyticsSidebar } from './components/AnalyticsSidebar';
 import { ChatSidebar } from './components/ChatSidebar';
 import { MainContent } from './components/MainContent';
 import styled from 'styled-components';

@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { BarChart3, TrendingUp, Users, Eye, ChevronLeft, ChevronRight } from "lucide-react"
 
-function AnalyticsSidebar() {
+export function AnalyticsSidebar() {
   const [isCollapsed, setIsCollapsed] = useState(false)
 
   const metrics = [
@@ -101,5 +101,3 @@ function AnalyticsSidebar() {
     </div>
   )
 }
-
-export default AnalyticsSidebar
