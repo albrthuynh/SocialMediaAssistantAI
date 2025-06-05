@@ -56,4 +56,4 @@ const scheduleAnalysis = () => {
 };
 
 // Start the first scheduled analysis
-scheduleAnalysis();
+// scheduleAnalysis();
