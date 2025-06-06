@@ -10,6 +10,11 @@ const app = express();
 app.use(cors()); // Enable CORS for frontend requests
 app.use(express.json()); // Parse JSON request bodies
 
+// Starting the server
+app.listen(4000, () => {
+    console.log('Server is running on http://localhost:4000');
+});
+
 // Routes
 app.get('/', (req, res) => {
     res.send('Welcome to the Reddit Post Analyzer API');
@@ -39,10 +44,7 @@ app.get('/api/viral-posts', async (req, res) => {
     }
 });
 
-// Starting the server
-app.listen(3000, () => {
-    console.log('Server is running on http://localhost:3000');
-});
+
 
 // Schedule analysis to run automatically every 6 hours
 const scheduleAnalysis = () => {
